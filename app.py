@@ -14,10 +14,12 @@ CORS(app)
 
 
 
+
+
+
 # ---------------- MODEL ----------------
 
-api_key = os.environ.get("ULTRALYTICS_API_KEY")
-model = YOLO("yolov8n.pt", api_key=api_key)
+model = YOLO("yolov8n.pt")
 
 
 # ---------------- UTILITIES ----------------
