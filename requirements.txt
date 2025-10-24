@@ -1,5 +1,6 @@
-flask==2.3.5
-flask-cors==4.0.0
-opencv-python-headless==4.8.1.78
-numpy==1.26.5
-ultralytics==9.12.1
+Flask
+flask-cors
+gunicorn
+ultralytics
+opencv-python-headless
+numpy
