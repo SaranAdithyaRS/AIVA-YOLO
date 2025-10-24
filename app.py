@@ -7,6 +7,7 @@ import threading
 import time
 import torch
 from ultralytics.nn.tasks import DetectionModel
+from torch.nn.modules.container import Sequential
 from ultralytics import YOLO
 from collections import Counter
 import os
@@ -15,7 +16,7 @@ app = Flask(__name__)
 CORS(app)
 
 # ---------------- MODEL ----------------
-with torch.serialization.safe_globals([DetectionModel]):
+with torch.serialization.safe_globals([DetectionModel, Sequential]):
     model = YOLO("yolov8n.pt")
 
 # ---------------- UTILITIES ----------------
