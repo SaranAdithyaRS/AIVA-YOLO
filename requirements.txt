@@ -1,0 +1,6 @@
+Flask
+flask-cors
+gunicorn
+ultralytics==8.0.196
+opencv-python-headless
+numpy
