@@ -1,7 +1,5 @@
-flask
-flask-cors
-torch==2.5.1
-torchvision==0.15.2
-ultralytics
-opencv-python
-numpy
+flask==2.3.5
+flask-cors==4.0.0
+opencv-python-headless==4.8.1.78
+numpy==1.26.5
+ultralytics==9.12.1
