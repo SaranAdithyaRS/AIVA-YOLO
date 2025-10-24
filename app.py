@@ -5,6 +5,8 @@ import cv2
 import numpy as np
 import threading
 import time
+import torch
+from ultralytics.nn.tasks import DetectionModel
 from ultralytics import YOLO
 from collections import Counter
 import os
@@ -13,7 +15,8 @@ app = Flask(__name__)
 CORS(app)
 
 # ---------------- MODEL ----------------
-model = YOLO("yolov8n.pt")
+with torch.serialization.safe_globals([DetectionModel]):
+    model = YOLO("yolov8n.pt")
 
 # ---------------- UTILITIES ----------------
 def pluralize(word, count):
